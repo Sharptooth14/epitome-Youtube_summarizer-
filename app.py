@@ -49,5 +49,5 @@ if st.button("Get Summary"):
 
     if transcript_text:
         summary = generate_gemini_content(transcript_text, prompt)
-        st.markdown("## Deatailed Summary:")
+        st.markdown("## Summary:")
         st.write(summary)

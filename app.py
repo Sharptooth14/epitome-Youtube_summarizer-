@@ -9,7 +9,7 @@ load_dotenv()
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-prompt = """ You are a Youtube video summarizer. You will be summarizing the entire video and providing the important summary in points within 250 words. Please provide the summary of text given here : """
+prompt = """ You are a Youtube video summarizer. You will be summarizing the entire video and providing the important summary in points within 500 words. Please provide the summary of text given here : """
 
 
 # getting the transcript from yt videos
@@ -49,5 +49,5 @@ if st.button("Get Summary"):
 
     if transcript_text:
         summary = generate_gemini_content(transcript_text, prompt)
-        st.markdown("## Summary:")
+        st.markdown("## Deatailed Summary:")
         st.write(summary)
